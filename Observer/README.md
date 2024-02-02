@@ -8,4 +8,5 @@ O padrão de projeto Observer permite que um objeto notifique outros objetos sob
 - **Exercício 3:** Implemente um contador de cliques que notifique a quem estiver interessado sempre que o número de cliques mudar;
 - **Exercício 4:** Implemente um sistema de alerta de temperatura que envie notificações para seus observadores sempre que a temperatura mudar;
 - **Exercício 5:** Implemente um sistema de notícias que notifique aos interessados sempre que uma nova notícia for publicada;
-- **Exercício 6:**  Implemente um sistema de chat que envie notificações para outros clientes sempre que uma nova mensagem for enviada.
+- **Exercício 6:** Implemente um sistema de notícias que notifique aos interessados sempre que uma nova notícia for publicada;
+- **Exercício 7:**  Implemente um sistema de chat que envie notificações para outros clientes sempre que uma nova mensagem for enviada.

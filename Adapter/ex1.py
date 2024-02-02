@@ -1,12 +1,20 @@
-# Usando o padrão de projeto Strategy para separar a lógica de negócio da lógica de apresentação
-# Fonte: [Refatorando Python: Dicas e Técnicas para Otimizar Seu Código](https://awari.com.br/refatorando-python-dicas-e-tecnicas-para-otimizar-seu-codigo/)
-
 class Cliente:
     def __init__(self, nome):
         self.nome = nome
 
-    def requisitar(self, estrategia):
-        return estrategia.executar()
+    def requisitar(self, comunicacao):
+        return comunicacao.enviar()
+
+class Comunicacao:
+    def enviar(self):
+        raise NotImplementedError
+
+class Adapter(Comunicacao):
+    def __init__(self, estrategia):
+        self.estrategia = estrategia
+
+    def enviar(self):
+        return self.estrategia.executar()
 
 class Estrategia:
     def __init__(self, descricao):
@@ -35,8 +43,11 @@ if __name__ == "__main__":
     email = EnviarEmail()
     sms = EnviarSMS()
 
-    resultado1 = cliente.requisitar(email)
-    resultado2 = cliente.requisitar(sms)
+    adapter_email = Adapter(email)
+    adapter_sms = Adapter(sms)
+
+    resultado1 = cliente.requisitar(adapter_email)
+    resultado2 = cliente.requisitar(adapter_sms)
 
     print(resultado1)
     print(resultado2)
