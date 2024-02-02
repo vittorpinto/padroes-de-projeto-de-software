@@ -1,6 +1,9 @@
-# Padrões de Projeto de Software
+# Facade
 
-## Tópicos Especiais em Engenharia de Software III: Padrões de Projeto
+O padrão de projeto Facade fornece uma interface unificada para um conjunto de interfaces em um subsistema. Esse padrão esconde a complexidade interna do subsistema e fornece uma única interface para o cliente, tornando-o mais fácil de ser usado e mantido. Esse padrão é útil quando queremos simplificar a interação entre o cliente e um sistema complexo, ou quando queremos organizar as dependências entre camadas. O padrão Facade facilita a modularidade, a legibilidade e a portabilidade do código.
 
-Este repositório contém vinte exercícios da disciplina. A linguagem utilizada foi Python e a IDE utilizada foi o Visual Studio Code.
 
+- **Exercício 1:** Considere uma classe Cliente que precisa interagir com uma classe BaseDeDados para efetuar operações de cadastro, recuperação, atualização e remoção de
+instâncias de uma classe Modelo que possui vários Elementos. O Cliente precisa estabelecer uma conexão como a BaseDeDados receber uma instância de uma classe Conexão e a partir da Conexão efetuar as operações desejadas. Forneça uma solução utilizando padrões que simplifique a interação do Cliente com as demais classes deste subsistema;
+- **Exercício 2:** Suponha que você deseja construir seu proprio home theater. O sistema contém uma TV, um som sorround, aparelhagem de DVD e um sintonizador para TV a cabo
+ou canais abertos. A TV tem as opções de ligar, desligar, controle de volume e escolha da entrada do sinal (DVD ou Sintonizador de TV). O Sistema de som surround tem as opções de Entrada (DVD ou Sintonizador de TV), controle de volume. Ligar estereo ou mono. O sintonizador de TV tem as opções de canais (AR ou Cabo) e opçoes de liga e desliga. Você deseja que o controle do seu sistema home theater seja feito de maneira automatizada por meio de um controle remoto.
